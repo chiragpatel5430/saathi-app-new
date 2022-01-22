@@ -191,6 +191,7 @@ h4{
 }
 
 .tag-line{
+  border-radius: 5px;
   color:#817df0;
   margin-top: 18%;
   margin-left: 12%;

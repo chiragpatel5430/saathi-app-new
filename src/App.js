@@ -7,11 +7,6 @@ import { useState } from 'react';
 function App() {
 
 
-  const countries = ["Please select country","INDIA"];
-  const states = ["Please select the State","GUJARAT"];
-  const districts = ["Please select the District","SURAT","AHMEDABAD","ANAND"];
-  const areas = ["Please select Area","NANPURA","VESU","DINDOLI"];
-  const bestOf = ["Please select best of","Top Restaurants","Top Street Foods","Top Guest Houses"];
   const nanpuraData = {
     "Top Street Foods":[
       {
@@ -708,6 +703,34 @@ function App() {
     ]
   }
 
+  
+  const countries = ["Please select country","INDIA","USA","CANADA"];
+  const states = ["Please select the State","GUJARAT"];
+  const districts = ["Please select the District","SURAT","AHMEDABAD","ANAND"];
+  const areas = ["Please select Area","NANPURA","VESU","DINDOLI"];
+  const bestOf = ["Please select best of","Top Restaurants","Top Street Foods","Top Guest Houses"];
+  const countryState = {
+    "INDIA":["Please select the State","GUJARAT","MAHARASHTRA","RAJASTHAN"],
+    "USA":["Please select the State"],
+    "CANADA":["Please select the State"]
+  }
+
+  const districtArea = {
+    "GUJARAT":["Please select the District","SURAT","AHMEDABAD","ANAND"],
+    "MAHARASHTRA":["Please select District"],
+    "RAJASTHAN":["Please select District"],
+  }
+
+  const area = {
+    "SURAT":["Please select Area","NANPURA","VESU","DINDOLI"],
+    "AHMEDABAD":["Please select Area"],
+    "ANAND":["Please select Area"],
+  }
+
+  const [selectedStateOption,setSelectedStateOption] = useState(["Please select State"]);
+  const [selectedDistrictOption,setSelectedDistrictOption] = useState(["Please select District"]);
+  const [selectedAreaOption,setSelectedAreaOption] = useState(["Please select Area"]);
+
   const [selectedItem,setSelectedItem] = useState([]);
   const [selectedCountry,setSelectedCountry] = useState("");
   const [selectedState,setSelectedState] = useState("");
@@ -717,14 +740,22 @@ function App() {
 
   const onChangeCountry = function(event){
     setSelectedCountry(event.target.value);
+    if(event.target.value !== 'Please select country'){
+    setSelectedStateOption(countryState[event.target.value]);
+    setSelectedDistrictOption(["Please select District"]);
+    setSelectedAreaOption(["Please select Area"]);
+    }
   }
 
   const onChangeState = function(event){
     setSelectedState(event.target.value);
+    setSelectedDistrictOption(districtArea[event.target.value]);
+    setSelectedAreaOption(["Please select Area"]);
   }
 
   const onChangeDistrict = function(event){
     setSelectedDistrict(event.target.value);
+    setSelectedAreaOption(area[event.target.value]);
   }
 
   const onChangeArea = function(event){
@@ -737,8 +768,13 @@ function App() {
   
   const onClickSearch = function(){
     console.log(selectedCountry);
-    if(selectedCountry !== "INDIA"){
+    if(selectedCountry === ""){
       alert("Please select country");
+      return;
+    }
+
+    if(selectedCountry !== "INDIA"){
+      alert(`Currently, Data is not available for ${selectedCountry}`);
       return;
     }
 
@@ -818,46 +854,61 @@ function App() {
             <div class="form-group">
               <label class="control-label" for="selectbasic">Select Country</label>
               <div>
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                  <option value="1">Option one</option>
-                  <option value="2">Option two</option>
-                  <option value="3">Option three</option>
+              <select id="selectbasic" name="selectbasic" class="form-control" onChange={onChangeCountry}>
+                {
+                  countries.map((country , index)=>{
+                    return <option>{country} </option> })
+                }
                 </select>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label" for="selectbasic">Select State</label>
               <div class="">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                  <option value="1">Option one</option>
-                  <option value="2">Option two</option>
-                  <option value="3">Option three</option>
+                <select id="selectbasic" name="selectbasic" class="form-control" onChange={onChangeState}>
+                {
+                  selectedStateOption.map((state , index)=>{
+                       return <option>{state} </option> })
+                }
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label" for="selectbasic">Select State</label>
+              <label class="control-label" for="selectbasic">Select District</label>
               <div class="">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                  <option value="1">Option one</option>
-                  <option value="2">Option two</option>
-                  <option value="3">Option three</option>
+                <select id="selectbasic" name="selectbasic" class="form-control" onChange={onChangeDistrict}>
+                {
+                selectedDistrictOption.map((district , index)=>{
+                  return <option>{district} </option> })
+                  }
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label" for="selectbasic">Select State</label>
+              <label class="control-label" for="selectbasic">Select Area</label>
               <div class="">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                  <option value="1">Option one</option>
-                  <option value="2">Option two</option>
-                  <option value="3">Option three</option>
+                <select id="selectbasic" name="selectbasic" class="form-control" onChange={onChangeArea}>
+                {
+                selectedAreaOption.map((area , index)=>{
+                  return <option>{area} </option> })
+                }
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="selectbasic">Select Best of</label>
+              <div class="">
+                <select id="selectbasic" name="selectbasic" class="form-control" onChange={onChangeBestOf}>
+                {
+                bestOf.map((eachBestOf , index)=>{
+                return <option>{eachBestOf} </option> })
+                }
                 </select>
               </div>
             </div>
             <div class="form-group">
               <div class="search-button">
-                <button id="button1id" name="button1id" class="btn btn-primary">Search</button>
+                <button id="button1id" name="button1id" class="btn btn-primary" onClick={onClickSearch}>Search</button>
               </div>
             </div>
           </div>
@@ -872,7 +923,7 @@ function App() {
           
 
         <div class="card" style={{'width': '18rem'}}>
-            <img src="..." class="card-img-top" alt="..."/>
+            <img src='' class="card-img-top" alt="..."/>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
