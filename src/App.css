@@ -100,16 +100,7 @@ a {
 
 
 @media (min-width: 999px) {
-  .logo {
-    margin-left: 0;
-    margin-top:-7.5%;
-    width: 40% ;
-    height: 10%;
-    display: inline-block;
-
-}
-
-
+ 
   .navbar {
     display: inline-block;
   }
@@ -212,7 +203,7 @@ h4{
     width: 40%;
   }
   .logo{
-    margin-top: -7.5%;
+    margin-top: -9.5%;
     width: 150px;
     height: 150px;
   }
@@ -237,11 +228,10 @@ h4{
 
 }
 
-@media (min-width: 576px) and (max-width: 768px) { 
+@media (min-width: 577px) and (max-width: 990px) { 
 
   .main-form{
       width: 85%;
-      width: 31%;
     }
     .logo{
       margin-top: -7.5%;
@@ -267,34 +257,3 @@ h4{
   }
   
  }
-
- @media only screen and (-webkit-min-device-pixel-ratio: 2.625) {
-  /* CSS */
-  .main-form{
-    width: 85%;
-    width: 31%;
-  }
-  .logo{
-    margin-top: -7.5%;
-    width: 150px;
-    height: 150px;
-  }
-  .form-control {
-    width: 70% !important;
-    margin-left: 17%;
-}
-
-.control-label{
-  margin-left: 17%;
-}
-.search-button{
-  margin-left: 17%;
-}
-.btn-primary{
-  width:84%;
-}
-h4{
-  font-size: 19px;
-}
-
-}
