@@ -927,7 +927,7 @@ function App() {
                 return (
 
                     <>
-                    <div class="card" style={{'width': '22rem'}}>
+                    <div class="card" style={{'width': '18rem'}}>
                         <img src={image1} class="card-img-top" alt=""/>
                         <div class="card-body">
                           <h5 class="card-title">{eachItem.name}</h5>
