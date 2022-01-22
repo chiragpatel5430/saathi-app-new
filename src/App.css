@@ -144,7 +144,7 @@ body{
 }
 
 .main-1{
-  /* display: flex; */
+  display: flex;
 }
 
 .main-form{
@@ -154,6 +154,7 @@ body{
   background-color: White;
   border-radius: 5px;
   margin: 35px;
+  margin-left: 10%;
 }
 
 .form-control, .control-label{
@@ -190,13 +191,30 @@ h4{
 }
 
 .tag-line{
-  
+  color:#817df0;
+  margin-top: 18%;
+  margin-left: 12%;
+  background-color: white;
+  width: 33%;
+  height: 20%;
+}
+
+.card{
+  margin: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 576px) { 
-
+  .tag-line{
+   width: 68%;
+   margin-left: 18%;
+   margin-top:4%;
+  }
+  .main-1{
+    display: block;
+  }
   .main-form{
       width: 85%;
+      margin-left: 8%;
     }
 
   .control-label{
@@ -230,8 +248,15 @@ h4{
 
 @media (min-width: 577px) and (max-width: 990px) { 
 
+  .tag-line{
+    width: 67%;
+    margin-left: 18%;
+    margin-top:4%;
+   }
+
   .main-form{
       width: 85%;
+      margin-left: 8%;
     }
     .logo{
       margin-top: -7.5%;
@@ -254,6 +279,9 @@ h4{
   }
   h4{
     font-size: 19px;
+  }
+  .main-1{
+    display: block;
   }
   
  }
