@@ -831,9 +831,18 @@ function App() {
     element.classList.toggle("expand");
   }
 
+  const responsiveMenuTemp = () => {
+    var navbar = document.querySelector(".navbar1");
+    var navList = document.querySelector(".nav-list");
+    navbar.classList.toggle("h-nav");
+    navList.classList.toggle('v-class');
+  }
+
   return (
     <div className="App">
-      <div class="header">
+      
+      
+      {/* <div class="header">
         <div class="container">
           <img class="logo" src={logo} />
           <a id="menu-icon" onClick={responsiveMenu}>&#9776;</a>
@@ -844,9 +853,24 @@ function App() {
               <li><a href="#">Contact Us</a></li>
             </ul>
           </nav>
-
         </div>
-      </div>
+      </div>  */}
+
+      <nav class="navbar1 background h-nav">
+        <ul class="nav-list v-class">
+              <img className="logo" src={logo} alt="logo"/>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact us</a></li>
+            </ul>
+            <div class="burger"  onClick={responsiveMenuTemp}>
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+        </nav>
+
+
       <div className='main'>
         <div className='main-1'>
           <div className='main-form'>
@@ -988,10 +1012,10 @@ function App() {
       </div>
       <div className="footer">
         <div className="wrapper">
-          <small>&copy;2022 <strong>Made by NH InfoSoft</strong>, All Rights Reserved</small>
+          <small>&copy;2022 <strong>Made by T & Tv Sarvajanik High School Nanpura</strong>, All Rights Reserved</small>
           <nav className="footer-nav">
             <a href="#"></a>
-            <a href="#"></a>
+            <a href="#">Aazadi ka Amrit Mohotsav</a>
             <a href="#"></a>
           </nav>
         </div>

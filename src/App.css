@@ -193,7 +193,7 @@ h4{
 .tag-line{
   border-radius: 5px;
   color:#817df0;
-  margin-top: 18%;
+  margin-top: 25%;
   margin-left: 12%;
   background-color: white;
   width: 35%;
@@ -334,3 +334,100 @@ strong {
   display: inline-block;
 }
 
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Nav bar */
+
+.navbar1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  cursor: pointer;
+  
+}
+
+.background{
+  background: skyblue;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.nav-list{
+  width: 70%;
+  display: flex;
+
+}
+.nav-list li{
+ list-style: none;
+ justify-content: center;
+ padding: 20px;
+  
+}
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold !important;
+}
+
+.nav-list li a:hover {
+  color: black;
+}
+
+.logo1{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.logo1 img{
+  width: 33%;
+  margin: 5px;
+}
+
+.burger{
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top:15px;
+  display: none;
+}
+.line{
+  width: 33px;
+  height: 4px;
+  background-color: white;
+  margin: 4px;
+}
+
+
+
+@media screen and (max-width:1140px){
+  .nav-list{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .navbar1{
+      flex-direction: column;
+      transition: all 0.7s ease-out;
+      height: 400px;
+  }
+  
+  .burger{
+      display: block;
+  }
+  .h-nav{
+      height: 72px;
+      
+  }
+  .v-class{
+      opacity: 0;
+  }
+  
+  
+}
