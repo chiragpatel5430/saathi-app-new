@@ -209,8 +209,31 @@ h4{
     }
 
   .control-label{
-    width: 31%;
+    width: 40%;
   }
+  .logo{
+    margin-top: -7.5%;
+    width: 150px;
+    height: 150px;
+  }
+  .form-control {
+    width: 70% !important;
+    margin-left: 17%;
+}
+.control-label{
+  margin-left: 17%;
+}
+
+.search-button{
+  margin-left: 17%;
+}
+.btn-primary{
+  width:84%;
+}
+
+h4{
+  font-size: 19px;
+}
 
 }
 
@@ -220,5 +243,28 @@ h4{
       width: 85%;
       width: 31%;
     }
+    .logo{
+      margin-top: -7.5%;
+      width: 150px;
+      height: 150px;
+    }
+    .form-control {
+      width: 70% !important;
+      margin-left: 17%;
+  }
+
+  .control-label{
+    margin-left: 17%;
+  }
+  .search-button{
+    margin-left: 17%;
+  }
+  .btn-primary{
+    width:84%;
+  }
+  h4{
+    font-size: 19px;
+  }
+  
  }
 
