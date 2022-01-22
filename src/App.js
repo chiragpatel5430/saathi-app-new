@@ -936,7 +936,7 @@ function App() {
                         </div>
                         {
                       eachItem.addOns.map((eachAddOns,index)=>{
-                        return (<div class="card-body">
+                        return (<div>
                         <h5 class="card-title">{eachAddOns.title}</h5>
                         <p class="card-text">{eachAddOns.info}</p>
                         <hr/>
@@ -947,7 +947,7 @@ function App() {
                     {
                       "menu" in eachItem?
                       (<div>
-                        <div class="card-body">
+                        <div >
                         <h5 class="card-title">Menu</h5>
                         <p class="card-text"><p>{eachItem.menu.map((eachMenu,index)=>{
                             return(
@@ -964,7 +964,7 @@ function App() {
                   {
                       "features" in eachItem?
                       (<div>
-                        <div class="card-body">
+                        <div>
                         <h5 class="card-title">Features</h5>
                         <p class="card-text"><p>{eachItem.features.map((eachFeature,index)=>{
                             return(
