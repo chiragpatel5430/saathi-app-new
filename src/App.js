@@ -2,6 +2,7 @@ import './App.css';
 import logo from './images/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import image1 from './images/1.jpg';
 
 
 function App() {
@@ -921,58 +922,67 @@ function App() {
         <div className='container'>
         <div className='row'>
           
+        {
+              selectedItem.map((eachItem,index)=>{
+                return (
 
-        <div class="card" style={{'width': '18rem'}}>
-            <img src='' class="card-img-top" alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-          
-          <div class="card" style={{'width': '18rem'}}>
-            <img src="..." class="card-img-top" alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
+                    <>
+                    <div class="card" style={{'width': '22rem'}}>
+                        <img src={image1} class="card-img-top" alt=""/>
+                        <div class="card-body">
+                          <h5 class="card-title">{eachItem.name}</h5>
+                          <p class="card-text">{eachItem.description}</p>
+                          <hr/>
+                        </div>
+                        {
+                      eachItem.addOns.map((eachAddOns,index)=>{
+                        return (<div class="card-body">
+                        <h5 class="card-title">{eachAddOns.title}</h5>
+                        <p class="card-text">{eachAddOns.info}</p>
+                        <hr/>
+                      </div>)
+                      })
+                    }
 
-          <div class="card" style={{'width': '18rem'}}>
-            <img src="..." class="card-img-top" alt="..."/>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-          
+                    {
+                      "menu" in eachItem?
+                      (<div>
+                        <div class="card-body">
+                        <h5 class="card-title">Menu</h5>
+                        <p class="card-text"><p>{eachItem.menu.map((eachMenu,index)=>{
+                            return(
+                            <>
+                            <span>{eachMenu}</span><br/>
+                            </>)
+                          })}</p></p>
+                        <hr/>
+                      </div>
+                      </div>
+                      ):''
+                    }
+
+                  {
+                      "features" in eachItem?
+                      (<div>
+                        <div class="card-body">
+                        <h5 class="card-title">Features</h5>
+                        <p class="card-text"><p>{eachItem.features.map((eachFeature,index)=>{
+                            return(
+                            <>
+                            <span>{eachFeature}</span><br/>
+                            </>)
+                          })}</p></p>
+                        <hr/>
+                      </div>
+                      </div>
+                      ):''
+                    }
+
+
+                    </div>
+                    </>);
+              })
+            }
         </div>
         </div>
       </div>
