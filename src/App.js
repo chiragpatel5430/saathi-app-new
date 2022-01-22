@@ -986,6 +986,16 @@ function App() {
         </div>
         </div>
       </div>
+      <div className="footer">
+        <div className="wrapper">
+          <small>&copy;2017 <strong>Awesome Company</strong>, All Rights Reserved</small>
+          <nav className="footer-nav">
+            <a href="#">About Us</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+          </nav>
+        </div>
+      </div>
     </div>
   );
 }

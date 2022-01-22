@@ -291,3 +291,46 @@ h4{
   }
   
  }
+
+ .footer {
+  /* box-sizing: border-box; */
+  position: relative;
+  
+}
+
+strong {
+  font-weight: 700;
+}
+
+
+.footer {
+  background: black;
+  display: table;
+  width: 100vw;
+  height: 8rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+  font-size: .875rem;
+  color:white
+}
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footer small {
+  color: #ccc;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.footer-nav a {
+  color: #c74f78;
+  text-decoration: none;
+  margin: 0 .5rem;
+  display: inline-block;
+}
+
