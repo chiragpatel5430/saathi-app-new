@@ -837,13 +837,13 @@ function App() {
         <div class="container">
           <img class="logo" src={logo} />
           <a id="menu-icon" onClick={responsiveMenu}>&#9776;</a>
-          {/* <nav id="navbar" class="navbar">
+          <nav id="navbar" class="navbar">
             <ul class="menu">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
-          </nav> */}
+          </nav>
 
         </div>
       </div>
@@ -914,9 +914,9 @@ function App() {
             </div>
           </div>
           <div className='tag-line'>
-            <h1>
+            <h2>
             Saathi....Har Safar ka Saathi
-            </h1>
+            </h2>
           </div>
         </div>
         <div className='container'>
@@ -988,11 +988,11 @@ function App() {
       </div>
       <div className="footer">
         <div className="wrapper">
-          <small>&copy;2017 <strong>Awesome Company</strong>, All Rights Reserved</small>
+          <small>&copy;2022 <strong>Made by NH InfoSoft</strong>, All Rights Reserved</small>
           <nav className="footer-nav">
-            <a href="#">About Us</a>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
           </nav>
         </div>
       </div>
