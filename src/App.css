@@ -204,6 +204,9 @@ h4{
 }
 
 @media (min-width: 0px) and (max-width: 576px) { 
+  .card{
+    margin: 11%;
+  }
   .tag-line{
    width: 68%;
    margin-left: 18%;
@@ -247,7 +250,9 @@ h4{
 }
 
 @media (min-width: 577px) and (max-width: 990px) { 
-
+  .card{
+    margin: 24%;
+  }
   .tag-line{
     width: 67%;
     margin-left: 18%;
