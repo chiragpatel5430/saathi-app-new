@@ -29,7 +29,7 @@ function App() {
       <div className='main'>
         <div className='main-1'>
           <div className='main-form'>
-            <h4>Please Fill the details</h4>
+            <h4>Please Fill the details To Find Your Best</h4>
             <hr/>
             <div class="form-group">
               <label class="control-label" for="selectbasic">Select Country</label>
@@ -73,7 +73,7 @@ function App() {
             </div>
             <div class="form-group">
               <div class="search-button">
-                <button id="button1id" name="button1id" class="btn btn-success">Search</button>
+                <button id="button1id" name="button1id" class="btn btn-primary">Search</button>
               </div>
             </div>
           </div>
