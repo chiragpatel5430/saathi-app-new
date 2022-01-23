@@ -1,10 +1,4 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 html {
   font-size: 100%;
@@ -128,7 +122,7 @@ a {
 }
 
 .logo{
-  margin-top:-2.5%;
+  margin-top:-3%;
   width: 150px;
   height: 150px;
 }
@@ -251,6 +245,9 @@ h4{
 }
 
 @media (min-width: 577px) and (max-width: 990px) { 
+  .navbar{
+    display: none;
+  }
   .card{
     margin: 24%;
   }
@@ -361,6 +358,8 @@ body {
 .nav-list{
   width: 70%;
   display: flex;
+  margin-top: 3px;
+    margin-bottom: -47px;
 
 }
 .nav-list li{

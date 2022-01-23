@@ -705,19 +705,19 @@ function App() {
   }
 
   
-  const countries = ["Please select country","INDIA","USA","CANADA"];
-  const states = ["Please select the State","GUJARAT"];
-  const districts = ["Please select the District","SURAT","AHMEDABAD","ANAND"];
+  const countries = ["Please select Country","INDIA","USA","CANADA"];
+  const states = ["Please select State","GUJARAT"];
+  const districts = ["Please select District","SURAT","AHMEDABAD","ANAND"];
   const areas = ["Please select Area","NANPURA","VESU","DINDOLI"];
   const bestOf = ["Please select best of","Top Restaurants","Top Street Foods","Top Guest Houses"];
   const countryState = {
-    "INDIA":["Please select the State","GUJARAT","MAHARASHTRA","RAJASTHAN"],
-    "USA":["Please select the State"],
-    "CANADA":["Please select the State"]
+    "INDIA":["Please select State","GUJARAT","MAHARASHTRA","RAJASTHAN"],
+    "USA":["Please select State"],
+    "CANADA":["Please select State"]
   }
 
   const districtArea = {
-    "GUJARAT":["Please select the District","SURAT","AHMEDABAD","ANAND"],
+    "GUJARAT":["Please select District","SURAT","AHMEDABAD","ANAND"],
     "MAHARASHTRA":["Please select District"],
     "RAJASTHAN":["Please select District"],
   }
@@ -741,7 +741,7 @@ function App() {
 
   const onChangeCountry = function(event){
     setSelectedCountry(event.target.value);
-    if(event.target.value !== 'Please select country'){
+    if(event.target.value !== 'Please select Country'){
     setSelectedStateOption(countryState[event.target.value]);
     setSelectedDistrictOption(["Please select District"]);
     setSelectedAreaOption(["Please select Area"]);
@@ -749,18 +749,24 @@ function App() {
   }
 
   const onChangeState = function(event){
+    if(event.target.value !== 'Please select State'){
     setSelectedState(event.target.value);
     setSelectedDistrictOption(districtArea[event.target.value]);
     setSelectedAreaOption(["Please select Area"]);
+    }
   }
 
   const onChangeDistrict = function(event){
+    if(event.target.value !== 'Please select District'){
     setSelectedDistrict(event.target.value);
     setSelectedAreaOption(area[event.target.value]);
+    }
   }
 
   const onChangeArea = function(event){
+    if(event.target.value !== 'Please select Area'){
     setSelectedArea(event.target.value);
+    }
   }
 
   const onChangeBestOf = function(event){
@@ -779,13 +785,28 @@ function App() {
       return;
     }
 
-    if(selectedState !== "GUJARAT"){
+    if(selectedState === ""){
       alert("Please select state");
       return;
     }
 
-    if(selectedDistrict !== "SURAT" && selectedDistrict !== "ANAND" && selectedDistrict !== "AHMEDABAD"){
+    if(selectedState !== "GUJARAT"){
+      alert(`Currently, Data is not available for ${selectedState}`);
+      return;
+    }
+
+    if(selectedDistrict === ""){
       alert("Please select district");
+      return;
+    }
+
+    if(selectedDistrict !== "SURAT"){
+      alert(`Currently, Data is not available for ${selectedDistrict}`);
+      return;
+    }
+
+    if(selectedArea === ""){
+      alert("Please select Area");
       return;
     }
 
@@ -854,7 +875,7 @@ function App() {
             </ul>
           </nav>
         </div>
-      </div>  */}
+      </div>   */}
 
       <nav class="navbar1 background h-nav">
         <ul class="nav-list v-class">
