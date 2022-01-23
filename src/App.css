@@ -309,7 +309,8 @@ strong {
   padding: 1rem;
   font-family: 'Arial', sans-serif;
   font-size: .875rem;
-  color:white
+  color:white;
+  bottom: 0%;
 }
 
 .wrapper {
@@ -429,4 +430,12 @@ body {
   }
   
   
+}
+
+
+@media screen and (min-height:1140px){
+  .footer{
+    position: absolute;
+    bottom: 0px;
+  }
 }
