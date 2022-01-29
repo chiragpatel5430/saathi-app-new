@@ -960,7 +960,7 @@ function App() {
           </div>
           <div className='tag-line'>
             <h2>
-            Saathi....Har Safar ka Saathi
+            Saathi...Safar Ka Sarthi
             </h2>
           </div>
         </div>
