@@ -137,6 +137,13 @@ a {
   height: 150px;
 }
 
+
+.logo1{
+  margin-top:-3%;
+  width: 150px;
+  height: 150px;
+}
+
 /* li{
   font-weight: bold;
 } */
@@ -385,15 +392,13 @@ body {
 }
 
 .logo1{
-  width: 20%;
+  width: 116%;
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: -38%;
 }
-.logo1 img{
-  width: 33%;
-  margin: 5px;
-}
+
 
 .burger{
   position: absolute;

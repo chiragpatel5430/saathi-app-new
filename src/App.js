@@ -3,6 +3,7 @@ import logo from './images/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import image1 from './images/1.jpg';
+import aazadiImage from './images/aazadi.png';
 
 
 function App() {
@@ -871,6 +872,7 @@ function App() {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact us</a></li>
+              <li><img className="logo1" src={aazadiImage} alt="logo"/></li>
             </ul>
             <div class="burger"  onClick={responsiveMenuTemp}>
               <div class="line"></div>
