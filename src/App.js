@@ -1026,9 +1026,10 @@ function App() {
           <small>&copy;2022 <strong>Made by T & Tv Sarvajanik High School Nanpura</strong>, All Rights Reserved</small>
           <nav className="footer-nav">
             <a href="#"></a>
-            <a href="#">Aazadi ka Amrit Mohotsav</a>
+            <a href="#"><img className="logo1" src={aazadiImage} alt="logo"/></a>
             <a href="#"></a>
           </nav>
+          <small><strong>Aazadi Ka Amrit Mohotsav</strong></small>
         </div>
       </div>
     </div>
