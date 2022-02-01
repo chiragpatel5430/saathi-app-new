@@ -705,7 +705,7 @@ function App() {
   }
 
   
-  const countries = ["Please select Country","INDIA","USA","CANADA"];
+  const countries = ["Please select Country","INDIA","USA","CANADA"," "];
   const states = ["Please select State","GUJARAT"];
   const districts = ["Please select District","SURAT","AHMEDABAD","ANAND"];
   const areas = ["Please select Area","NANPURA","VESU","DINDOLI"];
@@ -713,7 +713,10 @@ function App() {
   const countryState = {
     "INDIA":["Please select State","GUJARAT","MAHARASHTRA","RAJASTHAN"],
     "USA":["Please select State"],
-    "CANADA":["Please select State"]
+    "CANADA":["Please select State"],
+    "JAPAN":["Please select State"]
+    
+    
   }
 
   const districtArea = {
@@ -756,14 +759,14 @@ function App() {
     }
   }
 
-  const onChangeDistrict = function(event){
-    if(event.target.value !== 'Please select District'){
-    setSelectedDistrict(event.target.value);
-    setSelectedAreaOption(area[event.target.value]);
+    const onChangeDistrict = function(event){
+      if(event.target.value !== 'Please select District'){
+      setSelectedDistrict(event.target.value);
+      setSelectedAreaOption(area[event.target.value]);
+      }
     }
-  }
 
-  const onChangeArea = function(event){
+    const onChangeArea = function(event){
     if(event.target.value !== 'Please select Area'){
     setSelectedArea(event.target.value);
     }
@@ -860,25 +863,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+  <div className="App">
       
-      
-      {/* <div class="header">
-        <div class="container">
-          <img class="logo" src={logo} />
-          <a id="menu-icon" onClick={responsiveMenu}>&#9776;</a>
-          <nav id="navbar" class="navbar">
-            <ul class="menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>   */}
-
-      <nav class="navbar1 background h-nav">
-        <ul class="nav-list v-class">
+      <div class="navbar1 background h-nav">
+          <ul class="nav-list v-class">
               <img className="logo" src={logo} alt="logo"/>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -889,11 +877,10 @@ function App() {
               <div class="line"></div>
               <div class="line"></div>
             </div>
-        </nav>
-
+      </div>
 
       <div className='main'>
-        <div className='main-1'>
+        <div className='main-1'>  
           <div className='main-form'>
             <h4>Please Fill the details To Find Your Best</h4>
             <hr/>
@@ -904,6 +891,7 @@ function App() {
                 {
                   countries.map((country , index)=>{
                     return <option>{country} </option> })
+
                 }
                 </select>
               </div>
