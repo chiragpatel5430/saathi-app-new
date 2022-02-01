@@ -1029,7 +1029,7 @@ function App() {
             <a href="#"><img className="logo1" src={aazadiImage} alt="logo"/></a>
             <a href="#"></a>
           </nav>
-          <small><strong>Aazadi Ka Amrit Mohotsav</strong></small>
+          <small><strong>Aazadi Ka Amrit Mahotsav</strong></small>
         </div>
       </div>
     </div>
